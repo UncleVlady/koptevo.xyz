@@ -22,7 +22,9 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:293620, name:'Koptevo',key:'XXXXXXXXXXXXXXXX',
-                  fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'P'},{field:4,axis:'H'},{field:5,axis:'R'}]});
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'P'},{field:4,axis:'H'}]});
+	    // ,{field:5,axis:'R'}
+	    
 //channelKeys.push({channelNumber:5683, name:'Sam Rogers Solar System',key:'XXXXXXXXXXXXXXXX',
   // fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'T'},{field:4,axis:'T'},{field:5,axis:'T'},{field:6,axis:'T'}]});
 //channelKeys.push({channelNumber:9354, name:'CRYSTAL CITY WEATHER Fault',key:'XXXXXXXXXXXXXXXX',
@@ -246,7 +248,7 @@ $(document).ready(function()
 		},
     tooltip: {
       valueDecimals: 1,
-      valueSuffix: '°F',
+      valueSuffix: ' ',
       xDateFormat:'%Y-%m-%d<br/>%1:%M:%S %p'
 			// reformat the tooltips so that local times are displayed
 			//formatter: function() {
@@ -274,23 +276,27 @@ $(document).ready(function()
             id: 'T'
     }, {
             title: {
-                text: 'Pressure'
+                text: 'Pressure mmHg'
             },
             opposite: true,
             id: 'P'
     }, {
             title: {
-                text: 'Humidity'
+                text: 'Humidity %'
             },
             opposite: true,
             id: 'H'
-    }, {
-            title: {
-                text: 'Rainfall'
-            },
-            opposite: true,
-            id: 'R'
-    }],
+    }, 
+			
+//			{
+//            title: {
+//                text: 'Rainfall mm/h'
+//            },
+//            opposite: true,
+//            id: 'R'
+//    }
+		       
+		       ],
 		exporting: {
 		  enabled: true,
       csv: {
@@ -422,7 +428,7 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
 }
 
   </script>
-    <title>ThingSpeakMultichannel</title>
+    <title>Koptevo Weather</title>
   </head>
   <body style="                      background-color: white;">
     <div id="chart-container" style="height: 600px;"><br>
@@ -438,22 +444,22 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
       <select id="Channel Select">
       </select>
       <select id="Loads">
-        <option value="1">1 Load</option>
-        <option value="2">2 Loads</option>
-        <option value="3">3 Loads</option>
-        <option value="4">4 Loads</option>
-        <option value="5" selected="selected">5 Loads</option>
-        <option value="6">6 Loads</option>
-        <option value="7">7 Loads</option>
-        <option value="8">8 Loads</option>
-        <option value="9">9 Loads</option>
-        <option value="10">10 Loads</option>
-        <option value="15">15 Loads</option>
-        <option value="20">20 Loads</option>
-        <option value="25">25 Loads</option>
-        <option value="30">30 Loads</option>
-        <option value="40">40 Loads</option>
-        <option value="50">50 Loads</option>
+        <option value="1">5 Days</option>
+        <option value="2">11 Days</option>
+        <option value="3">16 Days</option>
+        <option value="4">22 Days</option>
+        <option value="5" selected="selected">27 Days</option>
+        <option value="6">33 Days</option>
+        <option value="7">38 Days</option>
+        <option value="8">44 Days</option>
+        <option value="9">49 Days</option>
+        <option value="10">55 Days</option>
+        <option value="15">82 Days</option>
+        <option value="20">110 Days</option>
+        <option value="25">137 Days</option>
+        <option value="30">165 Days</option>
+        <option value="40">220 Days</option>
+        <option value="50">275 Days</option>
       </select>
       <input id="Update" name="Update" type="checkbox"><span style="font-family: Lucida Grande;">Update
         Chart</span> <span id="Latency" style="font-family: Lucida Grande;">(Latency)</span>
