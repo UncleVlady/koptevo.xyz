@@ -22,7 +22,7 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:293620, name:'Koptevo',key:'XXXXXXXXXXXXXXXX',
-                  fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'O'},{field:4,axis:'O'},{field:5,axis:'O'}]});
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'P'},{field:4,axis:'H'},{field:5,axis:'R'}]});
 //channelKeys.push({channelNumber:5683, name:'Sam Rogers Solar System',key:'XXXXXXXXXXXXXXXX',
   // fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'T'},{field:4,axis:'T'},{field:5,axis:'T'},{field:6,axis:'T'}]});
 //channelKeys.push({channelNumber:9354, name:'CRYSTAL CITY WEATHER Fault',key:'XXXXXXXXXXXXXXXX',
@@ -258,7 +258,7 @@ $(document).ready(function()
 		xAxis: {
 		  type: 'datetime',
       ordinal:false,
-      min: Date.UTC(2013,02,28),
+      min: Date.UTC(2017,06,26),
 			dateTimeLabelFormats : {
         hour: '%l %p',
         minute: '%l:%M %p'
@@ -269,15 +269,27 @@ $(document).ready(function()
 		},
 		yAxis: [{
             title: {
-                text: 'Temperature °F'
+                text: 'Temperature °C'
             },
             id: 'T'
     }, {
             title: {
-                text: 'Other'
+                text: 'Pressure'
             },
             opposite: true,
-            id: 'O'
+            id: 'P'
+    }, {
+            title: {
+                text: 'Humidity'
+            },
+            opposite: true,
+            id: 'H'
+    }, {
+            title: {
+                text: 'Rainfall'
+            },
+            opposite: true,
+            id: 'R'
     }],
 		exporting: {
 		  enabled: true,
