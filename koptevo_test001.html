@@ -195,30 +195,30 @@ $(document).ready(function()
 			buttons: [{
 				count: 60,
 				type: 'minute',
-				text: '1H'
+				text: '1Ч'
 			}, {
 				count: 12,
 				type: 'hour',
-				text: '12H'
+				text: '12Ч'
       }, {
 				count: 1,
 				type: 'day',
-				text: 'D'
+				text: 'Д'
       }, {
 				count: 1,
 				type: 'week',
-				text: 'W'
+				text: 'Н'
       }, {
 				count: 1,
 				type: 'month',
-				text: 'M'
+				text: 'М'
       }, {
 				count: 1,
 				type: 'year',
-				text: 'Y'
+				text: 'Г'
 			}, {
 				type: 'all',
-				text: 'All'
+				text: 'Все'
 			}],
 			inputEnabled: true,
 			selected: 1
@@ -271,18 +271,18 @@ $(document).ready(function()
 		},
 		yAxis: [{
             title: {
-                text: 'Temperature (°C)'
+                text: 'Температура (°C)'
             },
             id: 'T'
     }, {
             title: {
-                text: 'Pressure (mmHg)'
+                text: 'Давление (mmHg)'
             },
             opposite: true,
             id: 'P'
     }, {
             title: {
-                text: 'Humidity (%)'
+                text: 'Влажность (%)'
             },
             opposite: true,
             id: 'H'
@@ -331,7 +331,7 @@ $(document).ready(function()
   }
 	// set chart labels here so that decoding occurs properly
 	//chartOptions.title.text = data.channel.name;
-	chartOptions.xAxis.title.text = 'Date';
+	chartOptions.xAxis.title.text = 'Дата';
 
 	// draw the chart
   dynamicChart = new Highcharts.StockChart(chartOptions);
@@ -428,7 +428,7 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
 }
 
   </script>
-    <title>Koptevo Weather</title>
+    <title>Коптево Погода</title>
   </head>
   <body style="                      background-color: white;">
     <div id="chart-container" style="height: 600px;"><br>
@@ -436,33 +436,31 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
     </div>
     <div id="below chart"> <button style="width: 89px; margin-top: -18px;" value="Hide All"
         name="Hide All Button"
-        onclick="HideAll();">Hide
-        All</button><button style="width: 162px; margin-top: -18px;" value="Load More Data"
+        onclick="HideAll();">Скрыть все</button><button style="width: 162px; margin-top: -18px;" value="Load More Data"
         name="Load More Data"
-        onclick="loadOneChannel();">Load
-        More Historical Data </button>
+        onclick="loadOneChannel();">Загрузить больше данных</button>
       <select id="Channel Select">
       </select>
       <select id="Loads">
-        <option value="1">5 Days</option>
-        <option value="2">11 Days</option>
-        <option value="3">16 Days</option>
-        <option value="4">22 Days</option>
-        <option value="5" selected="selected">27 Days</option>
-        <option value="6">33 Days</option>
-        <option value="7">38 Days</option>
-        <option value="8">44 Days</option>
-        <option value="9">49 Days</option>
-        <option value="10">55 Days</option>
-        <option value="15">82 Days</option>
-        <option value="20">110 Days</option>
-        <option value="25">137 Days</option>
-        <option value="30">165 Days</option>
-        <option value="40">220 Days</option>
-        <option value="50">275 Days</option>
+        <option value="1">5 Дней</option>
+        <option value="2">11 Дней</option>
+        <option value="3">16 Дней</option>
+        <option value="4">22 Дня</option>
+        <option value="5" selected="selected">27 Дней</option>
+        <option value="6">33 Дня</option>
+        <option value="7">38 Дней</option>
+        <option value="8">44 Дня</option>
+        <option value="9">49 Дней</option>
+        <option value="10">55 Дней</option>
+        <option value="15">82 Дня</option>
+        <option value="20">110 Дней</option>
+        <option value="25">137 Дней</option>
+        <option value="30">165 Дней</option>
+        <option value="40">220 Дней</option>
+        <option value="50">275 Дней</option>
       </select>
-      <input id="Update" name="Update" type="checkbox"><span style="font-family: Lucida Grande;">Update
-        Chart</span> <span id="Latency" style="font-family: Lucida Grande;">(Latency)</span>
+      <input id="Update" name="Update" type="checkbox"><span style="font-family: Lucida Grande;">Обновить график
+</span> <span id="Latency" style="font-family: Lucida Grande;">(Задержка)</span>
     </div>
   </body>
 </html>
