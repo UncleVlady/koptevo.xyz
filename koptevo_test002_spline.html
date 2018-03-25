@@ -227,7 +227,7 @@ $(document).ready(function()
 			text: ''
 		},
 		plotOptions: {
-		  line: {
+		  spline: {
         gapSize:5
 				//color: '#d62020'
 				//  },
@@ -436,7 +436,6 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
   <body style="                      background-color: white;">
 	  
 	  <h1>Welcome to Koptevo weather server</h1>
-	<p>Маша - бешеная писька!!!</p>
 	  <br>
 	  
     <div id="chart-container" style="height: 600px;"><br>
@@ -472,5 +471,8 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
       <input id="Update" name="Update" type="checkbox"><span style="font-family: Lucida Grande;">Update
         Chart</span> <span id="Latency" style="font-family: Lucida Grande;">(Latency)</span>
     </div>
+	  <br>
+	  <p>All data updated every minute. History data available since 2017.06.26</p>
+	  
   </body>
 </html>
