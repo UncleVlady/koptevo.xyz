@@ -22,8 +22,8 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:293620, name:'Koptevo',key:'XXXXXXXXXXXXXXXX',
-                  fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'P'},{field:4,axis:'H'}]});
-	    // ,{field:5,axis:'R'}
+                  fieldList:[{field:1,axis:'T'},{field:3,axis:'P'},{field:4,axis:'H'}]});
+	    // ,{field:5,axis:'R'}{field:2,axis:'T'},
 	    
 //channelKeys.push({channelNumber:5683, name:'Sam Rogers Solar System',key:'XXXXXXXXXXXXXXXX',
   // fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'T'},{field:4,axis:'T'},{field:5,axis:'T'},{field:6,axis:'T'}]});
@@ -193,9 +193,9 @@ $(document).ready(function()
 		},
 		rangeSelector: {
 			buttons: [{
-				count: 30,
+				count: 60,
 				type: 'minute',
-				text: '30M'
+				text: '1H'
 			}, {
 				count: 12,
 				type: 'hour',
